@@ -6,7 +6,6 @@ import sys
 
 import dotenv
 import fasttext
-from numpy.f2py.crackfortran import lenarraypattern
 from spacy.lang.en.stop_words import STOP_WORDS
 
 from lib import Config
@@ -54,32 +53,25 @@ def main():
     if not args.input:
         print("No input file specified.")
         sys.exit(1)
-    output = args.output if args.output else config.get("MODEL")
-    if not output:
-        print("No output file specified.")
-        sys.exit(1)
     config = load_config(config, args)
 
-    epoch = config.epoch
-    learning_rate = config.learning_rate
-    ngrams = config.ngrams
-    ignore_case = config.ignore_case
-    ignore_punctuation = config.ignore_punctuation
-    ignore_stopwords = config.ignore_stopwords
-    print(args.input, epoch, learning_rate, ngrams, ignore_case, ignore_punctuation, ignore_stopwords)
+    if not config.model:
+        print("No output file specified.")
+        sys.exit(1)
+
     with open(args.input, "r") as file:
         lines = file.readlines()
     if not lines:
         print("No data in input file.")
         sys.exit(1)
-    if ignore_case:
+    if config.ignore_case:
         lines = [line.lower() for line in lines]
-    if ignore_punctuation:
+    if config.ignore_punctuation:
         lines = [line.translate(str.maketrans('', '', string.punctuation)) for line in lines]
-    if ignore_stopwords:
+    if config.ignore_stopwords:
         lines = [" ".join([word for word in line.split() if word not in STOP_WORDS]) for line in lines]
 
-    created_file = False
+    created_file = False  # if we have to modify the training data, we make a tmp file
     if args.ignore_punctuation or args.ignore_case:
         with open("/tmp/training_data.txt", "w+") as out:
             for line in lines:
@@ -88,8 +80,8 @@ def main():
         args.input = "/tmp/training_data.txt"
         created_file = True
 
-    model = fasttext.train_supervised(input=args.input, epoch=epoch, lr=learning_rate, wordNgrams=ngrams)
-    model.save_model(output)
+    model = fasttext.train_supervised(input=args.input, epoch=config.epoch, lr=config.learning_rate, wordNgrams=config.ngrams)
+    model.save_model(config.model)
     if created_file:
         os.remove(args.input)
 
