@@ -27,7 +27,7 @@ class MediaManager:
         util.press_key(e.KEY_STOPCD)
 
     @staticmethod
-    def change_volume(string: str, up):
+    def change_volume(string: str, up: bool):
         parsed = util.parse_string(string)
         vol = [token.text for token in parsed if token.tag_ == "CD"]
 

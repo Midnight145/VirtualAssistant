@@ -5,18 +5,20 @@ import spacy
 from evdev import UInput, ecodes
 from fasttext import FastText
 from pulsectl import PulseSinkInfo
+from spacy.tokens import Doc
+
 from lib import Config
 import fasttext
 from spacy import Language
 from spacy.lang.en import STOP_WORDS
 
-model: fasttext.FastText = None
+model: fasttext.FastText
 # noinspection PyTypeChecker
-nlp: Language = None
+nlp: Language
 # noinspection PyTypeChecker
-uinput: UInput = None
+uinput: UInput
 # noinspection PyTypeChecker
-config: Config = None
+config: Config
 def init(config_: Config):
     global model, nlp, uinput, config
     model = fasttext.load_model("model.bin")
@@ -39,7 +41,6 @@ def get_active_sink(pulse: pulsectl.Pulse) -> PulseSinkInfo | None:
             return sink
     return None
 
-
 def set_volume(vol: float, change = False):
     if vol > 1.0 or vol < -1.0:
         vol /= 100
@@ -57,7 +58,7 @@ def set_volume(vol: float, change = False):
         # noinspection PyUnresolvedReferences
         print(f"Volume for {active_sink.description} set to {new_volume * 100:.0f}%")
 
-def normalize_string(s):
+def normalize_string(s: str) -> str:
     s = s.strip()
     if config.ignore_case:
         s = s.lower()
@@ -67,5 +68,5 @@ def normalize_string(s):
         s = " ".join([word for word in s.split() if word not in STOP_WORDS])
     return s
 
-def parse_string(string: str):
-    return nlp(string)
+def parse_string(string_: str) -> Doc:
+    return nlp(string_)
