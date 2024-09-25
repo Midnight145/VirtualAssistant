@@ -9,3 +9,4 @@ class Config:
         if "MODEL" not in env:
             raise ValueError("MODEL variable not set.")
         self.model = env.get("MODEL")
+        self.tomorrow_api_key = env.get("TOMORROW_API_KEY")

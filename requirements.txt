@@ -3,3 +3,4 @@ pulsectl~=24.8.0
 evdev~=1.7.1
 fasttext~=0.9.3
 python-dotenv~=1.0.1
+requests~=2.32.3

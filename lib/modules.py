@@ -1,12 +1,43 @@
 from evdev import ecodes as e
-
+from geopy import geocoders
+import requests
 from lib import util
 
+gn = geocoders.Nominatim(user_agent="virtual-assistant-weather")
 
 def weather(string: str):
+    api = "https://api.tomorrow.io/v4/weather/forecast?location={}&apikey={}&units=imperial"
+
     parsed = util.parse_string(string)
     locs = [ent.text for ent in parsed.ents if ent.label_ == "GPE"]
     print(locs)
+    if not locs:
+        print("No location found.")
+        return
+    loc_str = " ".join(locs)
+    # Tomorrow api for some reason won't actually accept the city name, so we have to get the lat/long
+    # Unsure why, as the docs say it should accept city names
+    # I've contacted them about it, will rewrite this if it gets resolved
+    location = gn.geocode(loc_str)
+    lat = location.latitude
+    long = location.longitude
+    loc = locs[0]
+    resp = requests.get(api.format(f"{lat}, {long}", util.config.tomorrow_api_key), headers={"Accept": "application/json"})
+    data = resp.json()
+    print(data)
+    if "tomorrow" in string:
+        idx = 1
+
+    else:
+        idx = 0
+    daily = data["timelines"]["daily"][idx]["values"]
+    high = daily["temperatureMax"]
+    low = daily["temperatureMin"]
+    rainChance = daily["precipitationProbabilityAvg"]
+    cloudy = daily["cloudCoverAvg"]
+
+    print(f"{'Today' if idx == 0 else 'Tomorrow'} in {loc} the high will be {high}°F, the low will be {low}°F, there is a {rainChance}% chance of rain, and it will be {cloudy}% cloudy.")
+
 # https://www.tomorrow.io/weather-api/  # API for weather data
 
 class MediaManager:

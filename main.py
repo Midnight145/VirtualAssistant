@@ -5,7 +5,8 @@ from lib import Config, modules, util
 config = Config(dotenv_values(".env"))
 util.init(config)
 
-user_input = "Lower the volume by 10%"
+# user_input = "Lower the volume by 10%"
+user_input = "What is the weather in Denton?"
 prediction_text = util.normalize_string(user_input)
 prediction = util.predict(prediction_text)
 print(prediction)
