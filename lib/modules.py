@@ -29,8 +29,10 @@ class MediaManager:
     @staticmethod
     def change_volume(string: str, up: bool):
         parsed = util.parse_string(string)
+        # will pull out all numbers from the string
         vol = [token.text for token in parsed if token.tag_ == "CD"]
 
+        # if there's more than one number for some reason, we just assume the first number is correct
         if up:
             util.set_volume(int(vol[0]), change=True)
         else:
