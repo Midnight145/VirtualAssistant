@@ -1,8 +1,13 @@
+import datetime
 import string
+import time
+import re
 
 import fasttext
+import notify2
 import pulsectl
 import spacy
+
 from evdev import UInput, ecodes
 from pulsectl import PulseSinkInfo
 from spacy import Language
@@ -78,3 +83,27 @@ def normalize_string(s: str) -> str:
 
 def parse_string(string_: str) -> Doc:
     return nlp(string_)
+
+
+def extract_time_regex(text: str):
+    # Regex pattern to match time in the format HH:MM
+    time_pattern = r'\b([0-1]?[0-9]|2[0-3]):[0-5][0-9]\b'
+    match = re.search(time_pattern, text)
+    if match:
+        return match.group()
+    return None
+
+
+def set_timer(time_: str):
+    current_time = datetime.datetime.now()
+    print(time_)
+    time_ = time_.split(":")
+    print("split:",time_)
+    hours = int(time_[0])
+    minutes = int(time_[1])
+    target_time = current_time.replace(hour=hours + 12 if current_time.hour > hours else hours, minute=minutes, second=0, microsecond=0)
+    delta = target_time - current_time
+    print(delta.total_seconds())
+    time.sleep(delta.total_seconds())
+    notify2.init("Virtual Assistant")
+    notify2.Notification("Timer", "Time's up!", "notification-message-im").show()

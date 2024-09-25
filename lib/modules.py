@@ -1,6 +1,9 @@
+import threading
+
+import requests
 from evdev import ecodes as e
 from geopy import geocoders
-import requests
+
 from lib import util
 
 gn = geocoders.Nominatim(user_agent="virtual-assistant-weather")
@@ -38,7 +41,6 @@ def weather(string: str):
 
     print(f"{'Today' if idx == 0 else 'Tomorrow'} in {loc} the high will be {high}°F, the low will be {low}°F, there is a {rainChance}% chance of rain, and it will be {cloudy}% cloudy.")
 
-# https://www.tomorrow.io/weather-api/  # API for weather data
 
 class MediaManager:
     @staticmethod
@@ -74,3 +76,16 @@ class MediaManager:
         parsed = util.parse_string(string)
         vol = [token.text for token in parsed if token.tag_ == "CD"]
         util.set_volume(int(vol[0]))
+
+def settimer(user_input: str):
+    parsed = util.parse_string(user_input)
+    time_ = [ent.text for ent in parsed.ents if ent.label_ == "TIME"]
+    if not time_:
+        if time_ := util.extract_time_regex(user_input) is None:
+            print("No time found.")
+            return
+    else:
+        time_ = time_[0]
+    thread = threading.Thread(target=util.set_timer, args=(time_,))
+    thread.start()
+    print(f"Timer set for {time_[0]}")

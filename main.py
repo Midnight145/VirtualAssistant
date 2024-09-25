@@ -20,3 +20,5 @@ elif prediction[0][0] == "__label__lowervolume":
     modules.MediaManager.change_volume(user_input, up=False)
 elif prediction[0][0] == "__label__stopplay":
     modules.MediaManager.stopplay()
+elif prediction[0][0] == "__label__settimer":
+    modules.settimer(user_input)
