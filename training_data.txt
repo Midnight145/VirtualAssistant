@@ -1,0 +1,268 @@
+searchweb Find information about climate change
+searchweb Search the web for DIY home improvement ideas
+searchweb Look up recent scientific discoveries
+searchweb Explore details about famous landmarks
+searchweb Find articles on technology trends
+searchweb Search for information on healthy eating
+searchweb Look for news about space exploration
+searchweb Search the internet for travel tips
+searchweb Find me information on world history
+searchweb Look up details about endangered species
+searchweb Search the web for the best movie reviews
+searchweb Explore the latest fashion trends
+searchweb Search for reviews of the latest gadgets
+searchweb Find out more about famous artists
+searchweb Search for interesting facts about animals
+searchweb Search the web for the latest news
+searchweb Find information about the Eiffel Tower
+searchweb Look up popular restaurants in New York
+searchweb Search the internet for healthy recipes
+searchweb Find me details about climate change
+searchweb Look for articles on artificial intelligence
+searchweb Explore information on space exploration
+searchweb Search the web for the weather forecast
+searchweb Find out more about renewable energy
+searchweb Look up famous historical events
+searchweb Search for news on technology trends
+settimer Set a timer for 5 minutes
+settimer Can you set a timer for 10 minutes?
+settimer I need to set a timer for 30 seconds
+settimer Please set a timer for 1 hour
+settimer Set a timer for 20 minutes
+settimer Can you set an alarm for 45 minutes?
+settimer I want to set a timer for 5 seconds
+settimer Please set a timer for 15 minutes
+settimer Set an alarm for 2 hours
+settimer Set a timer for 10 seconds
+settimer Set an alarm for 1 hour and 30 minutes
+settimer Can you set a timer for 3 minutes?
+settimer Please set a timer for 25 minutes
+settimer I need to set a timer for 2 hours and 45 minutes
+settimer Set a timer for 12 minutes
+settimer Set a timer for 3 hours and 15 minutes
+settimer Can you set an alarm for 45 seconds?
+settimer I want to set a timer for 2 minutes
+settimer Please set a timer for 1 minute and 30 seconds
+settimer Set a timer for 8 hours
+settimer Can you set a timer for 10 seconds?
+settimer I need to set an alarm for 45 minutes
+settimer Please set a timer for 2 hours
+settimer Set an alarm for 5 minutes and 30 seconds
+settimer Set a timer for 7 minutes
+settimer Set an alarm for 1 hour and 15 minutes
+settimer Can you set a timer for 20 seconds?
+settimer I want to set a timer for 3 hours
+settimer Please set a timer for 5 minutes and 45 seconds
+settimer Set a timer for 9 minutes
+runscript Run my script named "app.py"
+runscript Can you execute my "report_generation.py" script?
+runscript I want to run the script "data_processing.py"
+runscript Please execute "script1.sh"
+runscript Run my script called "automation_script.py"
+runscript Can you start the "web_server.py" script?
+runscript I need to run the script "analyze_data.R"
+runscript Please execute my "backup_script.sh"
+runscript Run my "image_processing.py" script
+runscript Can you start the "cleanup.js" script?
+runscript I want to run my "script2.py" script
+runscript Run my "automation.bat" script
+runscript Please execute my "data_import.R" script
+runscript I need to run the "fetch_data.py" script
+runscript Run my "report_generation.sh" script
+runscript Run my script called "video_converter.py"
+runscript Can you execute my "data_cleaning.py" script?
+runscript I want to run the script "dashboard_generator.sh"
+runscript Please start the "data_analysis.py" script
+runscript Run my "report_export.js" script
+runscript Can you execute the "email_notification.py" script?
+runscript I need to run my "backup_database.sh" script
+runscript Please execute my "image_compression.py" script
+runscript Run my "data_visualization.R" script
+runscript Can you start the "database_migration.sql" script?
+runscript I want to run my "api_server.py" script
+runscript Run my "automation_task.bat" script
+runscript Please execute the "file_processing.c" script
+runscript I need to run the "data_sync.py" script
+runscript Run my "script3.sh" script
+setvolume Set the volume to 50%
+setvolume Change the volume to 25%
+setvolume Set the volume level to 5%
+setvolume Set the sound level to 80%
+setvolume Adjust the volume to 30%
+setvolume Turn the volume to 75%
+setvolume Set the audio to 60%
+setvolume Set the volume to exactly 10%
+setvolume Change the sound to 45%
+setvolume Set the volume to max
+setvolume Set the volume to 100%
+setvolume Adjust the volume to 50%
+setvolume Set the audio to 40%
+setvolume Change the volume to 75%
+setvolume Set the sound to 60%
+setvolume Turn the volume to 20%
+setvolume Set the volume level to 90%
+setvolume Adjust the sound to 30%
+setvolume Set the volume to 10%
+setvolume Change the volume to exactly 70%
+setvolume Set the volume to 0%
+setvolume Set the sound level to 25%
+setvolume Set the audio level to 15%
+setvolume Change the volume to 35%
+setvolume Adjust the volume to 85%
+setvolume Set the volume to 45%
+setvolume Set the volume to 95%
+setvolume Turn the sound to 55%
+setvolume Set the sound exactly to 65%
+setvolume Change the volume level to 5%
+raisevolume Increase the volume
+raisevolume Raise the audio
+raisevolume Turn up the sound
+raisevolume Make it louder
+raisevolume Volume up
+raisevolume Raise the volume
+raisevolume Increase the audio level
+raisevolume Turn up the sound a bit
+raisevolume Loud please
+raisevolume Make it louder
+raisevolume Raise the volume by 10%
+raisevolume Increase sound
+raisevolume Boost the audio
+raisevolume Turn up the volume by 15%
+raisevolume Raise the audio level by 20%
+raisevolume Turn up the sound a little
+raisevolume Make it louder please
+raisevolume Volume up by 5%
+raisevolume Raise the volume a bit
+raisevolume Increase sound level
+raisevolume Boost the audio by 10%
+raisevolume Increase the audio volume
+raisevolume Make it louder by 15%
+lowervolume Decrease the volume
+lowervolume Lower the audio
+lowervolume Turn it down
+lowervolume Make it quieter
+lowervolume Volume down
+lowervolume Lower the volume
+lowervolume Decrease the audio level
+lowervolume Turn down the sound a bit
+lowervolume Quieter please
+lowervolume Make it quieter
+lowervolume Lower the volume by 10%
+lowervolume Decrease sound
+lowervolume Reduce the audio
+lowervolume Turn it down by 15%
+lowervolume Decrease the volume to minimum
+lowervolume Lower the audio level by 20%
+lowervolume Turn down the sound a little
+lowervolume Make it softer please
+lowervolume Volume down by 5%
+lowervolume Lower the volume a bit
+lowervolume Decrease sound level
+lowervolume Reduce the audio by 10%
+lowervolume Decrease the audio volume
+lowervolume Lower the volume to 20%
+lowervolume Make it quieter by 15%
+playpause Play some music
+playpause Start the video
+playpause Play a song
+playpause Begin the movie
+playpause Resume the audio
+playpause Start playing
+playpause Play the track
+playpause Begin the video
+playpause Start the media
+playpause Commence playback
+playpause Play the movie
+playpause Start the song
+playpause Play the content
+playpause Begin the podcast
+playpause Pause the music
+playpause Pause the song
+playpause Pause the audio
+playpause Pause the track
+playpause Pause the media
+playpause Cease playback
+playpause Pause the movie
+playpause Pause the content
+stopplay Stop the music completely
+stopplay End the song now
+stopplay Turn off the music
+stopplay Stop the video
+stopplay Stop playing the audio
+stopplay Stop the movie
+stopplay Completely stop the playback
+stopplay Stop all media
+stopplay Stop everything playing right now
+stopplay Turn off the audio entirely
+stopplay Stop the current track
+stopplay Completely stop the podcast
+stopplay Halt all media playback
+stopplay Stop the playlist from playing
+stopplay Stop music right now
+stopplay Stop playing the current media
+stopplay End the playback session
+stopplay Stop the video from continuing
+stopplay Stop the sound
+stopplay Turn off the song fully
+addtodoitemwithdatetime Add "Buy groceries" for tomorrow to my to-do list
+addtodoitemwithdatetime Create a new to-do: "Finish report" for later today
+addtodoitemwithdatetime Put "Call John" on my task list at 5:30 PM
+addtodoitemwithdatetime Add a new item: "Pay bills" for next Wednesday to my to-do list
+addtodoitemwithdatetime Record "Send email to client" as a to-do for Friday
+addtodoitemwithdatetime Include "Exercise for 30 minutes" at 9:00 AM in my tasks
+addtodoitemwithdatetime Append "Schedule dentist appointment" for next month to my to-do list
+addtodoitemwithdatetime Add to my tasks: "Read book for 30 minutes" at 3:45 PM
+addtodoitemwithdatetime Add "Prepare presentation" for next week at 2:00 PM to my to-do list
+addtodoitemwithdatetime Create a new to-do: "Call Mary" for 4:30 PM
+addtodoitemwithdatetime Put "Write code for project" on my task list at 10:00 AM
+addtodoitemwithdatetime Add a new item: "Visit dentist," for next Monday at 3:15 PM to my to-do list
+addtodoitemwithdatetime Record "Submit expense report" as a to-do for Thursday at 1:30 PM
+addtodoitemwithdatetime Include "Review meeting notes" at 5:45 PM in my tasks
+addtodoitemwithdatetime Add "Buy birthday gift" for next month on the 15th at 11:00 AM to my to-do list
+addtodoitemwithdatetime Create a new to-do: "Send invitation cards" for tomorrow at 9:00 AM
+addtodoitemwithdatetime Put "Plan vacation" on my task list at 4:00 PM on the 20th
+addtodoitemwithdatetime Add a new item: "Attend conference" for next Friday at 2:30 PM to my to-do list
+addtodoitemwithdatetime Record "Complete project report" as a to-do for Monday at 12:45 PM
+addtodoitemwithdatetime Include "Shop for groceries" at 6:30 PM on the 5th in my tasks
+askweather What's the weather like today?
+askweather Tell me the weather for tomorrow
+askweather How's the weather right now?
+askweather What's the forecast for this weekend?
+askweather Is it going to rain today?
+askweather What's the weather like in New York?
+askweather Give me the weather for tomorrow in London
+askweather Tell me the weather for the next few days
+askweather Will it be sunny this afternoon?
+askweather What's the temperature outside?
+askweather What's the weather forecast?
+askweather Check the weather for tomorrow morning
+askweather What's the weather like later today?
+askweather Is it going to snow tomorrow?
+askweather What's the weather for this week?
+askweather What's the current weather in San Francisco?
+askweather Is it hot outside right now?
+askweather Tell me the forecast for the evening
+askweather Will it rain tomorrow afternoon?
+askweather Show me the weather for today
+askweather Is it going to be cold tomorrow?
+askweather What's the weather in Los Angeles next Friday?
+askweather Check the weather forecast for next week
+askweather What’s the weather for the rest of the day?
+askweather Will it be warm this weekend?
+askweather Tell me if it’s raining outside
+askweather Is it cloudy today?
+askweather What’s the weather for Monday morning?
+askweather Can you check the weather for me?
+askweather How's the weather this afternoon?
+askweather Give me the weather forecast for next Saturday
+askweather Is it sunny right now?
+askweather What’s the weather like in Paris?
+askweather What's the weather for tonight?
+askweather Is it going to be stormy tomorrow?
+askweather Can you show me the forecast for the next 3 days?
+askweather Tell me if it’s going to rain later
+askweather What’s the temperature right now in my location?
+askweather Is the weather good for a hike today?
+askweather What’s the humidity today?
+askweather Is it going to be windy tomorrow?
+askweather Tell me how hot it is today
