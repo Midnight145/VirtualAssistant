@@ -4,6 +4,8 @@ import string
 import argparse
 import sys
 import fasttext
+from spacy.lang.en.stop_words import STOP_WORDS
+
 
 def main():
     parser = argparse.ArgumentParser()
@@ -14,6 +16,7 @@ def main():
     parser.add_argument("-n", "--ngrams", help="Number of word n-grams to use", default=2, type=int)
     parser.add_argument("--ignore-case", help="Ignore case when training the model", action="store_true", default=False)
     parser.add_argument("--ignore-punctuation", help="Ignore punctuation when training the model", action="store_true", default=False)
+    parser.add_argument("--ignore-stopwords", help="Ignore stopwords when training the model", action="store_true", default=False)
 
     args = parser.parse_args()
 
@@ -33,6 +36,8 @@ def main():
         lines = [line.lower() for line in lines]
     if args.ignore_punctuation:
         lines = [line.translate(str.maketrans('', '', string.punctuation)) for line in lines]
+    if args.ignore_stopwords:
+        lines = [" ".join([word for word in line.split() if word not in STOP_WORDS]) for line in lines]
 
     if args.ignore_punctuation or args.ignore_case:
         with open("/tmp/training_data.txt", "w+") as out:
@@ -55,6 +60,7 @@ def main():
 def normalize_string(s):
     s = s.lower().strip()
     s = s.translate(str.maketrans('', '', string.punctuation))
+    s = " ".join([word for word in s.split() if word not in STOP_WORDS])
     return s
 
 if __name__ == "__main__":

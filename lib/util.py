@@ -1,23 +1,28 @@
+import string
+
 import pulsectl
 import spacy
 from evdev import UInput, ecodes
 from fasttext import FastText
 from pulsectl import PulseSinkInfo
-
+from lib import Config
 import fasttext
 from spacy import Language
+from spacy.lang.en import STOP_WORDS
 
-model: fasttext._FastText = None
+model: fasttext.FastText = None
 # noinspection PyTypeChecker
 nlp: Language = None
 # noinspection PyTypeChecker
 uinput: UInput = None
-
-def init():
-    global model, nlp, uinput
+# noinspection PyTypeChecker
+config: Config = None
+def init(config_: Config):
+    global model, nlp, uinput, config
     model = fasttext.load_model("model.bin")
     nlp = spacy.load("en_core_web_sm")
     uinput = UInput()
+    config = config_
 
 def predict(string: str):
     return model.predict(string)
@@ -51,6 +56,16 @@ def set_volume(vol: float, change = False):
         pulse.volume_set_all_chans(active_sink, new_volume)
         # noinspection PyUnresolvedReferences
         print(f"Volume for {active_sink.description} set to {new_volume * 100:.0f}%")
+
+def normalize_string(s):
+    s = s.strip()
+    if config.ignore_case:
+        s = s.lower()
+    if config.ignore_punctuation:
+        s = s.translate(str.maketrans('', '', string.punctuation))
+    if config.ignore_stopwords:
+        s = " ".join([word for word in s.split() if word not in STOP_WORDS])
+    return s
 
 def parse_string(string: str):
     return nlp(string)
