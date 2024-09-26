@@ -18,29 +18,21 @@ def weather(string: str, *args):
     if not locs:
         print("No location found.")
         return
-    loc_str = " ".join(locs)
-    # Tomorrow api for some reason won't actually accept the city name, so we have to get the lat/long
-    # Unsure why, as the docs say it should accept city names
-    # I've contacted them about it, will rewrite this if it gets resolved
-    location = gn.geocode(loc_str)
-    lat = location.latitude
-    long = location.longitude
-    loc = locs[0]
-    resp = requests.get(api.format(f"{lat}, {long}", util.config.tomorrow_api_key), headers={"Accept": "application/json"})
+    loc = " ".join(locs)
+    resp = requests.get(api.format(loc, util.config.tomorrow_api_key), headers={"Accept": "application/json"})
     data = resp.json()
     print(data)
-    if "tomorrow" in string:
+    if "tomorrow" in string.lower():
         idx = 1
-
     else:
         idx = 0
     daily = data["timelines"]["daily"][idx]["values"]
     high = daily["temperatureMax"]
     low = daily["temperatureMin"]
-    rainChance = daily["precipitationProbabilityAvg"]
-    cloudy = daily["cloudCoverAvg"]
+    rain_chance = daily["precipitationProbabilityAvg"] * 100
+    cloudy = daily["cloudCoverAvg"] * 100
 
-    print(f"{'Today' if idx == 0 else 'Tomorrow'} in {loc} the high will be {high}°F, the low will be {low}°F, there is a {rainChance}% chance of rain, and it will be {cloudy}% cloudy.")
+    print(f"{'Today' if idx == 0 else 'Tomorrow'} in {loc} the high will be {high}°F, the low will be {low}°F, there is a {rain_chance}% chance of rain, and it will be {cloudy}% cloudy.")
 
 
 class MediaManager:
