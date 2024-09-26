@@ -34,6 +34,9 @@ def load_config(config, args):
     if args.output:
         print("Overriding output file from the command line")
         config["MODEL"] = args.output
+    if args.add_label:
+        print("Overriding add label from the command line")
+        config["ADD_LABEL"] = args.add_label
     return Config(config)
 
 def main():
@@ -47,6 +50,7 @@ def main():
     parser.add_argument("--ignore-case", help="Ignore case when training the model", action="store_true")
     parser.add_argument("--ignore-punctuation", help="Ignore punctuation when training the model", action="store_true")
     parser.add_argument("--ignore-stopwords", help="Ignore stopwords when training the model", action="store_true")
+    parser.add_argument("--add-label", help="Add a label to the beginning of each line in the training data", action="store_true")
 
     args = parser.parse_args()
 
@@ -54,7 +58,7 @@ def main():
         print("No input file specified.")
         sys.exit(1)
     config = load_config(config, args)
-
+    print(config.ignore_stopwords)
     if not config.model:
         print("No output file specified.")
         sys.exit(1)
@@ -70,15 +74,16 @@ def main():
         lines = [line.translate(str.maketrans('', '', string.punctuation)) for line in lines]
     if config.ignore_stopwords:
         lines = [" ".join([word for word in line.split() if word not in STOP_WORDS]) for line in lines]
-
+    if config.add_label:
+        lines = ["__label__" + line for line in lines]
     created_file = False  # if we have to modify the training data, we make a tmp file
-    if args.ignore_punctuation or args.ignore_case:
+    if config.ignore_punctuation or config.ignore_case or config.add_label or config.ignore_stopwords:
         with open("/tmp/training_data.txt", "w+") as out:
             for line in lines:
-                out.write("__label__" + line)
+                out.write(line + "\n")
 
         args.input = "/tmp/training_data.txt"
-        created_file = True
+        # created_file = True
 
     model = fasttext.train_supervised(input=args.input, epoch=config.epoch, lr=config.learning_rate, wordNgrams=config.ngrams)
     model.save_model(config.model)
