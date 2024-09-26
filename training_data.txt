@@ -1,29 +1,75 @@
-searchweb Find information about climate change
-searchweb Search the web for DIY home improvement ideas
-searchweb Look up recent scientific discoveries
-searchweb Explore details about famous landmarks
-searchweb Find articles on technology trends
-searchweb Search for information on healthy eating
-searchweb Look for news about space exploration
-searchweb Search the internet for travel tips
-searchweb Find me information on world history
-searchweb Look up details about endangered species
-searchweb Search the web for the best movie reviews
-searchweb Explore the latest fashion trends
-searchweb Search for reviews of the latest gadgets
-searchweb Find out more about famous artists
-searchweb Search for interesting facts about animals
-searchweb Search the web for the latest news
-searchweb Find information about the Eiffel Tower
-searchweb Look up popular restaurants in New York
-searchweb Search the internet for healthy recipes
-searchweb Find me details about climate change
-searchweb Look for articles on artificial intelligence
-searchweb Explore information on space exploration
-searchweb Search the web for the weather forecast
-searchweb Find out more about renewable energy
-searchweb Look up famous historical events
-searchweb Search for news on technology trends
+tellmeabout What can you tell me about [subject]?
+tellmeabout Give me a summary of [subject].
+tellmeabout Explain [subject] to me.
+tellmeabout What is [subject] about?
+tellmeabout I want to know about [subject].
+tellmeabout Can you tell me about [subject]?
+tellmeabout Provide information on [subject].
+tellmeabout Tell me about [subject].
+tellmeabout What’s the story behind [subject]?
+tellmeabout I need details on [subject].
+tellmeabout Can you explain [subject] to me?
+tellmeabout What’s the deal with [subject]?
+tellmeabout Provide a brief overview of [subject].
+tellmeabout Can you give me details on [subject]?
+tellmeabout What do I need to know about [subject]?
+tellmeabout Summarize [subject] for me.
+tellmeabout Give me a rundown on [subject].
+tellmeabout What is the background of [subject]?
+tellmeabout Break down [subject] for me.
+tellmeabout What’s the history of [subject]?
+tellmeabout What's the information on [subject]?
+tellmeabout Could you brief me on [subject]?
+tellmeabout Give me the highlights of [subject].
+tellmeabout I'd like to know about [subject].
+tellmeabout Share the basics of [subject] with me.
+tellmeabout Fill me in on [subject].
+tellmeabout What should I know about [subject]?
+tellmeabout Enlighten me about [subject].
+tellmeabout What are the key points of [subject]?
+tellmeabout Help me understand [subject].
+tellmeabout How can you explain [subject] to me?
+tellmeabout Give me some background on [subject].
+tellmeabout Provide a summary of [subject].
+tellmeabout Explain the history of [subject].
+tellmeabout What’s the essence of [subject]?
+tellmeabout Tell me about [subject]
+tellmeabout Tell me more about [subject]
+tellmeabout Can you tell me more about [subject]?
+tellmeabout What is [subject]?
+searchweb Search the web for [topic].
+searchweb Find information online about [topic].
+searchweb Look up [topic] on the internet.
+searchweb Search online for [topic].
+searchweb Can you search the web for [topic]?
+searchweb Search for [topic] on the web.
+searchweb Look up [topic] online.
+searchweb Open a search for [topic].
+searchweb Google [topic].
+searchweb Start a web search for [topic].
+searchweb Look up [topic] on Google.
+searchweb Can you find some articles about [topic]?
+searchweb Browse the web for [topic].
+searchweb Search the internet for information on [topic].
+searchweb Start an online search for [topic].
+searchweb Find me some info on [topic].
+searchweb Open a browser and search for [topic].
+searchweb Web search [topic] for me.
+searchweb Look for [topic] online.
+searchweb Use the web to find [topic].
+searchweb Get information on [topic] from the web.
+searchweb Check online sources for [topic].
+searchweb Do a search for [topic] on the web.
+searchweb Find [topic] through a web search.
+searchweb Look up [topic] via an internet search.
+searchweb Perform a search for [topic] on the web.
+searchweb See what the web says about [topic].
+searchweb Search [topic] on the internet.
+searchweb Try finding [topic] online.
+searchweb Pull up information on [topic] from the web.
+searchweb Can you look up [topic] for me online?
+searchweb Open the browser and find [topic] online.
+searchweb Search the net for [topic].
 settimer Set a timer for 5 minutes
 settimer Can you set a timer for 10 minutes?
 settimer I need to set a timer for 30 seconds
@@ -54,36 +100,6 @@ settimer Can you set a timer for 20 seconds?
 settimer I want to set a timer for 3 hours
 settimer Please set a timer for 5 minutes and 45 seconds
 settimer Set a timer for 9 minutes
-runscript Run my script named "app.py"
-runscript Can you execute my "report_generation.py" script?
-runscript I want to run the script "data_processing.py"
-runscript Please execute "script1.sh"
-runscript Run my script called "automation_script.py"
-runscript Can you start the "web_server.py" script?
-runscript I need to run the script "analyze_data.R"
-runscript Please execute my "backup_script.sh"
-runscript Run my "image_processing.py" script
-runscript Can you start the "cleanup.js" script?
-runscript I want to run my "script2.py" script
-runscript Run my "automation.bat" script
-runscript Please execute my "data_import.R" script
-runscript I need to run the "fetch_data.py" script
-runscript Run my "report_generation.sh" script
-runscript Run my script called "video_converter.py"
-runscript Can you execute my "data_cleaning.py" script?
-runscript I want to run the script "dashboard_generator.sh"
-runscript Please start the "data_analysis.py" script
-runscript Run my "report_export.js" script
-runscript Can you execute the "email_notification.py" script?
-runscript I need to run my "backup_database.sh" script
-runscript Please execute my "image_compression.py" script
-runscript Run my "data_visualization.R" script
-runscript Can you start the "database_migration.sql" script?
-runscript I want to run my "api_server.py" script
-runscript Run my "automation_task.bat" script
-runscript Please execute the "file_processing.c" script
-runscript I need to run the "data_sync.py" script
-runscript Run my "script3.sh" script
 setvolume Set the volume to 50%
 setvolume Change the volume to 25%
 setvolume Set the volume level to 5%
@@ -204,34 +220,12 @@ stopplay End the playback session
 stopplay Stop the video from continuing
 stopplay Stop the sound
 stopplay Turn off the song fully
-addtodoitemwithdatetime Add "Buy groceries" for tomorrow to my to-do list
-addtodoitemwithdatetime Create a new to-do: "Finish report" for later today
-addtodoitemwithdatetime Put "Call John" on my task list at 5:30 PM
-addtodoitemwithdatetime Add a new item: "Pay bills" for next Wednesday to my to-do list
-addtodoitemwithdatetime Record "Send email to client" as a to-do for Friday
-addtodoitemwithdatetime Include "Exercise for 30 minutes" at 9:00 AM in my tasks
-addtodoitemwithdatetime Append "Schedule dentist appointment" for next month to my to-do list
-addtodoitemwithdatetime Add to my tasks: "Read book for 30 minutes" at 3:45 PM
-addtodoitemwithdatetime Add "Prepare presentation" for next week at 2:00 PM to my to-do list
-addtodoitemwithdatetime Create a new to-do: "Call Mary" for 4:30 PM
-addtodoitemwithdatetime Put "Write code for project" on my task list at 10:00 AM
-addtodoitemwithdatetime Add a new item: "Visit dentist," for next Monday at 3:15 PM to my to-do list
-addtodoitemwithdatetime Record "Submit expense report" as a to-do for Thursday at 1:30 PM
-addtodoitemwithdatetime Include "Review meeting notes" at 5:45 PM in my tasks
-addtodoitemwithdatetime Add "Buy birthday gift" for next month on the 15th at 11:00 AM to my to-do list
-addtodoitemwithdatetime Create a new to-do: "Send invitation cards" for tomorrow at 9:00 AM
-addtodoitemwithdatetime Put "Plan vacation" on my task list at 4:00 PM on the 20th
-addtodoitemwithdatetime Add a new item: "Attend conference" for next Friday at 2:30 PM to my to-do list
-addtodoitemwithdatetime Record "Complete project report" as a to-do for Monday at 12:45 PM
-addtodoitemwithdatetime Include "Shop for groceries" at 6:30 PM on the 5th in my tasks
 askweather What's the weather like today?
-askweather Tell me the weather for tomorrow
 askweather How's the weather right now?
 askweather What's the forecast for this weekend?
 askweather Is it going to rain today?
 askweather What's the weather like in New York?
 askweather Give me the weather for tomorrow in London
-askweather Tell me the weather for the next few days
 askweather Will it be sunny this afternoon?
 askweather What's the temperature outside?
 askweather What's the weather forecast?
@@ -241,7 +235,6 @@ askweather Is it going to snow tomorrow?
 askweather What's the weather for this week?
 askweather What's the current weather in San Francisco?
 askweather Is it hot outside right now?
-askweather Tell me the forecast for the evening
 askweather Will it rain tomorrow afternoon?
 askweather Show me the weather for today
 askweather Is it going to be cold tomorrow?
@@ -249,7 +242,6 @@ askweather What's the weather in Los Angeles next Friday?
 askweather Check the weather forecast for next week
 askweather What’s the weather for the rest of the day?
 askweather Will it be warm this weekend?
-askweather Tell me if it’s raining outside
 askweather Is it cloudy today?
 askweather What’s the weather for Monday morning?
 askweather Can you check the weather for me?
@@ -260,9 +252,8 @@ askweather What’s the weather like in Paris?
 askweather What's the weather for tonight?
 askweather Is it going to be stormy tomorrow?
 askweather Can you show me the forecast for the next 3 days?
-askweather Tell me if it’s going to rain later
 askweather What’s the temperature right now in my location?
 askweather Is the weather good for a hike today?
 askweather What’s the humidity today?
 askweather Is it going to be windy tomorrow?
-askweather Tell me how hot it is today
+askweather Is it supposed to rain?

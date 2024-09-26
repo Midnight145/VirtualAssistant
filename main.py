@@ -4,21 +4,23 @@ from lib import Config, modules, util
 
 config = Config(dotenv_values(".env"))
 util.init(config)
+module_map = {
+    "askweather": modules.weather,
+    "playpause": modules.MediaManager.play_pause,
+    "raisevolume": lambda x: modules.MediaManager.change_volume(x, up=True),
+    "lowervolume": lambda x: modules.MediaManager.change_volume(x, up=False),
+    "stopplay": modules.MediaManager.stopplay,
+    "settimer": modules.settimer,
+    "setvolume": modules.MediaManager.set_volume,
+    "tellmeabout": modules.tellmeabout,
+    "searchweb": modules.searchweb
+}
 
-# user_input = "Lower the volume by 10%"
-user_input = "What is the weather in Denton?"
+user_input = input("string: ")
 prediction_text = util.normalize_string(user_input)
-prediction = util.predict(prediction_text)
-print(prediction)
-if prediction[0][0] == "__label__askweather":
-    modules.weather(user_input)
-elif prediction[0][0] == "__label__playpause":
-    modules.MediaManager.play_pause()
-elif prediction[0][0] == "__label__raisevolume":
-    modules.MediaManager.change_volume(user_input, up=True)
-elif prediction[0][0] == "__label__lowervolume":
-    modules.MediaManager.change_volume(user_input, up=False)
-elif prediction[0][0] == "__label__stopplay":
-    modules.MediaManager.stopplay()
-elif prediction[0][0] == "__label__settimer":
-    modules.settimer(user_input)
+intents, confidence_scores = util.predict(prediction_text, 3)
+prediction = intents[0]
+print(f"Predicted intent {prediction} with confidence {confidence_scores[0]}")
+intent = prediction[9::]
+print(intent)
+module_map[intent](user_input)
